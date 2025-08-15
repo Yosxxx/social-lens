@@ -4,6 +4,7 @@ import { FileUpload } from '../../components/aceternity/file-upload'
 import JSZip from 'jszip'
 import { toast, ToastContainer } from 'react-toastify'
 import Modal from '../../components/modal'
+import Link from 'next/link'
 
 type UserData = {
     link: string
@@ -119,6 +120,12 @@ export default function Upload() {
                     >
                         Reset
                     </button>
+                    <Link
+                        href={'/'}
+                        className='px-8 py-2 flex items-center z-10 bg-black text-white rounded-lg transform hover:-translate-y-1 transition duration-200 border-2 border-transparent hover:border-zinc-600'
+                    >
+                        Back
+                    </Link>
                 </div>
 
                 {modalOpen && <Modal title={modalTitle} users={modalUsers} onClose={() => setModalOpen(false)} />}

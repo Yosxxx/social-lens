@@ -15,7 +15,7 @@ export default function Home() {
             </div>
 
             <div className='flex gap-x-5 text-white'>
-                <Link href={'#'} className='p-[3px] relative'>
+                <Link href={'/docs'} className='p-[3px] relative'>
                     <div className='absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg' />
                     <div className='px-8 py-2 bg-black rounded-[6px] relative group transition duration-150 hover:bg-transparent'>
                         Docs
