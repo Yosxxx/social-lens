@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ContainerTextFlip } from './../../components/aceternity/container-text-flip'
+import { ContainerTextFlip } from '../components/aceternity/container-text-flip'
 
 export default function Home() {
     return (
