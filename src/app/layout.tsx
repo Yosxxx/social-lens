@@ -1,6 +1,7 @@
 import './globals.css'
 import { Montserrat } from 'next/font/google'
 import { BackgroundBeams } from './../../components/aceternity/background-beams'
+import Footer from '../../components/footer'
 
 const montserrat = Montserrat({
     subsets: ['latin'],
@@ -14,6 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <body className={montserrat.className}>
                 <BackgroundBeams />
                 {children}
+                <Footer />
             </body>
         </html>
     )
