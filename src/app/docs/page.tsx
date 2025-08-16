@@ -1,6 +1,5 @@
 import { Timeline } from '@/components/aceternity/timeline'
 import { LinkPreview } from './../../components/aceternity/link-preview'
-import Link from 'next/link'
 
 export default function Docs() {
     const data = [
@@ -8,7 +7,7 @@ export default function Docs() {
             title: 'How to download your data',
             content: (
                 <div>
-                    <p className='mb-8 text-xs font-normal text-neutral-200 md:text-sm dark:text-neutral-200'>
+                    <div className='mb-8 text-xs font-normal text-neutral-200 md:text-sm '>
                         Navigate to your
                         <LinkPreview
                             url='https://www.instagram.com/'
@@ -26,7 +25,7 @@ export default function Docs() {
                             "Following" and "Follower" lists. Then set the date range to "All time" and start the
                             export. (We do not save your data; everything is processed locally on your device.)
                         </span>
-                    </p>
+                    </div>
                     <div className='grid grid-cols-2 gap-4'>
                         <img
                             src={'/timeline/1-1.jpg'}
@@ -56,7 +55,7 @@ export default function Docs() {
             title: 'How to upload data',
             content: (
                 <div>
-                    <p className='mb-8 text-xs font-normal text-neutral-200  md:text-sm dark:text-neutral-200'>
+                    <div className='mb-8 text-xs font-normal text-neutral-200  md:text-sm '>
                         After you download the .zip file from Instagram, head over to the website →
                         <LinkPreview
                             url='#'
@@ -75,7 +74,7 @@ export default function Docs() {
                             you back. Take your time exploring each section to understand your Instagram connections
                             better.
                         </span>
-                    </p>
+                    </div>
                     <div className='grid grid-cols-2 gap-4'>
                         <img
                             src={'/timeline/2-1.jpg'}
@@ -100,25 +99,25 @@ export default function Docs() {
             title: 'Navigation',
             content: (
                 <div>
-                    <p className='mb-4 text-xs font-normal text-neutral-200  md:text-sm dark:text-neutral-200'>
+                    <div className='mb-4 text-xs font-normal text-neutral-200  md:text-sm '>
                         The four main buttons show Instagram information: Followers, Followings, People who don't follow
                         you back, and People you don't follow back. You can click on a username to open that user's
                         Instagram page. <br /> <br />
                         ⚠️<strong>Be careful:</strong> repeatedly opening Instagram profiles directly from the app may
                         trigger Instagram's anti-bot mechanisms or appear suspicious, which could temporarily restrict
                         your account. Always use this feature sparingly to avoid unwanted account flags. 🚩
-                    </p>
+                    </div>
                     <div className='mb-8'>
-                        <div className='flex items-center gap-2 text-xs text-neutral-200  md:text-sm dark:text-neutral-300'>
+                        <div className='flex items-center gap-2 text-xs text-neutral-200  md:text-sm '>
                             ✅ Followings
                         </div>
-                        <div className='flex items-center gap-2 text-xs text-neutral-200  md:text-sm dark:text-neutral-300'>
+                        <div className='flex items-center gap-2 text-xs text-neutral-200  md:text-sm '>
                             ✅ Followers
                         </div>
-                        <div className='flex items-center gap-2 text-xs text-neutral-200  md:text-sm dark:text-neutral-300'>
+                        <div className='flex items-center gap-2 text-xs text-neutral-200  md:text-sm '>
                             ✅ People who don't follow you back
                         </div>
-                        <div className='flex items-center gap-2 text-xs text-neutral-200  md:text-sm dark:text-neutral-300'>
+                        <div className='flex items-center gap-2 text-xs text-neutral-200  md:text-sm '>
                             ✅ People you don't follow back
                         </div>
                     </div>

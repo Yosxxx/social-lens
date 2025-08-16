@@ -1,5 +1,5 @@
 'use client'
-import { useMotionValueEvent, useScroll, useTransform, motion } from 'motion/react'
+import { useScroll, useTransform, motion } from 'motion/react'
 import React, { useEffect, useRef, useState } from 'react'
 
 interface TimelineEntry {
@@ -30,7 +30,9 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     return (
         <div className='w-full dark:bg-neutral-950 font-sans md:px-10' ref={containerRef}>
             <div className='max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10'>
-                <h2 className='text-lg md:text-4xl mb-4 text-neutral-200 dark:text-white max-w-4xl'>Documenation</h2>
+                <h2 className='text-lg md:text-4xl mb-4 text-neutral-200 dark:text-white max-w-4xl font-black'>
+                    Documentation
+                </h2>
                 <p className='text-neutral-400 dark:text-neutral-300 text-sm md:text-base max-w-sm'>
                     This section shows a step-by-step guide on how to access and upload your Instagram data, so you can
                     view your followers, followings, and other information.

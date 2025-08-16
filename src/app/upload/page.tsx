@@ -102,7 +102,7 @@ export default function Upload() {
         <div className='flex-col flex h-screen justify-center items-center'>
             <ToastContainer position='top-right' autoClose={3000} />
 
-            <div className='flex items-center flex-col justify-center w-[40vw] bg-zinc-950/80 p-10 rounded-xl'>
+            <div className='flex items-center flex-col justify-center w-[40vw] bg-zinc-950/80 p-10 rounded-xl max-md:w-[90vw] max-sm:py-10 max-sm:px-0'>
                 <FileUpload files={files} onChange={handleFileUpload} />
 
                 <div className='flex gap-x-5 mt-5'>
@@ -120,24 +120,18 @@ export default function Upload() {
                     >
                         Reset
                     </button>
-                    <Link
-                        href={'/'}
-                        className='px-8 py-2 flex items-center z-10 bg-black text-white rounded-lg transform hover:-translate-y-1 transition duration-200 border-2 border-transparent hover:border-zinc-600'
-                    >
-                        Back
-                    </Link>
                 </div>
 
                 {modalOpen && <Modal title={modalTitle} users={modalUsers} onClose={() => setModalOpen(false)} />}
                 {(followingList.length > 0 || followerList.length > 0) && (
-                    <div className='mt-10 flex gap-5'>
+                    <div className='mt-10 flex gap-5 max-sm:gap-1 max-sm:flex-wrap justify-center '>
                         <button
                             onClick={() => {
                                 setModalTitle('Followings')
                                 setModalUsers(followingList)
                                 setModalOpen(true)
                             }}
-                            className='px-8 py-2 bg-zinc-900 z-10 text-white text-sm rounded-md font-semibold hover:bg-zinc-700 hover:shadow-lg transition duration-150 cursor-pointer'
+                            className='max-md:text-xs max-md:px-4 max-md:py-2 px-8 py-2 bg-zinc-900 z-10 text-white text-sm rounded-md font-semibold hover:bg-zinc-700 hover:shadow-lg transition duration-150 cursor-pointer'
                         >
                             Followings
                         </button>
@@ -148,7 +142,7 @@ export default function Upload() {
                                 setModalUsers(followerList)
                                 setModalOpen(true)
                             }}
-                            className='px-8 py-2 bg-zinc-900 z-10 text-white text-sm rounded-md font-semibold hover:bg-zinc-700 hover:shadow-lg transition duration-150 cursor-pointer'
+                            className='max-md:text-xs max-md:px-4 max-md:py-2 px-8 py-2 bg-zinc-900 z-10 text-white text-sm rounded-md font-semibold hover:bg-zinc-700 hover:shadow-lg transition duration-150 cursor-pointer'
                         >
                             Followers
                         </button>
@@ -159,7 +153,7 @@ export default function Upload() {
                                 setModalUsers(notFollowingYouBackList)
                                 setModalOpen(true)
                             }}
-                            className='px-8 py-2 bg-zinc-900 z-10 text-white text-sm rounded-md font-semibold hover:bg-zinc-700 hover:shadow-lg transition duration-150 cursor-pointer'
+                            className='max-md:text-xs max-md:px-4 max-md:py-2 px-8 py-2 bg-zinc-900 z-10 text-white text-sm rounded-md font-semibold hover:bg-zinc-700 hover:shadow-lg transition duration-150 cursor-pointer'
                         >
                             Not Following You Back🔥
                         </button>
@@ -170,7 +164,7 @@ export default function Upload() {
                                 setModalUsers(youDontFollowBackList)
                                 setModalOpen(true)
                             }}
-                            className='px-8 py-2 bg-zinc-900 z-10 text-white text-sm rounded-md font-semibold hover:bg-zinc-700 hover:shadow-lg transition duration-150 cursor-pointer'
+                            className='max-md:text-xs max-md:px-4 max-md:py-2 px-8 py-2 bg-zinc-900 z-10 text-white text-sm rounded-md font-semibold hover:bg-zinc-700 hover:shadow-lg transition duration-150 cursor-pointer'
                         >
                             You Don't Follow Back
                         </button>

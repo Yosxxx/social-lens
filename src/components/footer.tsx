@@ -6,8 +6,10 @@ export default function Footer() {
                 <p>
                     Built by <span className='font-bold'>Yosua</span>
                 </p>
-                <p className='mt-2'>Every follow tells a story; some are genuine, some are just noise.</p>
-                <p className='mt-1 italic text-zinc-400'>vibecoded with ChatGPT-5</p>
+                <p className='mt-2 max-md:text-xs'>“Obsessed with follows, blind to reality.”</p>
+                <p className='mt-1 italic text-zinc-400 max-md:text-xs'>
+                    vibecoded with ChatGPT-5, aceternity-ui, and next.js
+                </p>
             </div>
         </footer>
     )

@@ -1,3 +1,5 @@
+'use client'
+import { usePathname } from 'next/navigation'
 import './globals.css'
 import { Montserrat } from 'next/font/google'
 import { BackgroundBeams } from '../components/aceternity/background-beams'
@@ -10,10 +12,14 @@ const montserrat = Montserrat({
 })
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+    const pathname = usePathname()
+
+    const showBackground = pathname !== '/docs'
+
     return (
         <html lang='en'>
             <body className={`${montserrat.className} scroll-smooth`}>
-                <BackgroundBeams />
+                <div className='max-sm:hidden'>{showBackground && <BackgroundBeams />}</div>
                 {children}
                 <Footer />
             </body>
