@@ -1,10 +1,8 @@
 import "./globals.css";
-import { Geist } from "next/font/google";
 import { ThemeProvider } from "@/components/theme/theme-provider";
-
-const geist = Geist({
-  subsets: ["latin"],
-});
+import { GeistSans } from "geist/font/sans";
+import ThemedBackground from "@/components/theme/theme-background";
+import Footer from "@/components/footer";
 
 export default function RootLayout({
   children,
@@ -12,9 +10,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={geist.className} suppressHydrationWarning>
-      <body>
-        <ThemeProvider>{children}</ThemeProvider>
+    <html lang="en" className={GeistSans.className} suppressHydrationWarning>
+      <body className="transition">
+        <ThemeProvider>
+          <ThemedBackground>
+            {children} <Footer />
+          </ThemedBackground>
+        </ThemeProvider>
       </body>
     </html>
   );
