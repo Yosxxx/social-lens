@@ -9,7 +9,7 @@ export function ThemeProvider({
   return (
     <NextThemesProvider
       attribute="class" // applies "light" or "dark" class on <html>
-      defaultTheme="darks" // default follows OS preference
+      defaultTheme="dark" // default follows OS preference
       enableSystem // allow system theme switching
       disableTransitionOnChange // prevents weird flickers
     >

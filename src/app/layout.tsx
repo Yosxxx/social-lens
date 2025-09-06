@@ -3,6 +3,7 @@ import { ThemeProvider } from "@/components/theme/theme-provider";
 import { GeistSans } from "geist/font/sans";
 import ThemedBackground from "@/components/theme/theme-background";
 import Footer from "@/components/footer";
+import ThemeToggleButton from "@/components/theme/theme-toggle-btn";
 
 export default function RootLayout({
   children,
@@ -14,7 +15,11 @@ export default function RootLayout({
       <body className="transition">
         <ThemeProvider>
           <ThemedBackground>
-            {children} <Footer />
+            <span className="fixed top-5 right-5">
+              <ThemeToggleButton />
+            </span>
+            <main className="flex-1">{children}</main>
+            <Footer />
           </ThemedBackground>
         </ThemeProvider>
       </body>

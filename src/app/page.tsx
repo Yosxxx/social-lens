@@ -1,15 +1,10 @@
 import { ContainerTextFlip } from "@/components/ui/container-text-flip";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import ThemeToggleButton from "@/components/theme/theme-toggle-btn";
 
 export default function Home() {
   return (
     <div className="flex min-h-screen justify-center items-center flex-col gap-y-5 ">
-      <span className="fixed top-5 right-5">
-        <ThemeToggleButton />
-      </span>
-
       <div className="flex gap-y-2 flex-col text-center font-medium text-5xl">
         <div>Behind every follow is a story.</div>
         <div>Some are real, most are not.</div>
@@ -39,7 +34,7 @@ export default function Home() {
             Search by username
           </Button>
         </Link>
-        <Link href={"#"}>
+        <Link href={"/upload-file"}>
           <Button className="py-5.5 px-8 text-white z-10 bg-black text-lg ">
             Upload
           </Button>
