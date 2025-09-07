@@ -21,8 +21,8 @@ export default function Home() {
       </div>
 
       <div className="flex gap-5 items-center">
-        <Link href={"#"}>
-          <button className="p-[3px] relative ">
+        <Link href={"/docs"}>
+          <button className="p-[3px] relative hover:cursor-pointer">
             <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg " />
             <div className="px-8 py-2 bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent text-lg">
               Docs
@@ -35,7 +35,7 @@ export default function Home() {
           </Button>
         </Link>
         <Link href={"/upload-file"}>
-          <Button className="py-5.5 px-8 text-white z-10 bg-black text-lg ">
+          <Button className="py-5.5 px-8 text-white z-10 bg-black text-lg hover:-translate-y-1 hover:ring-2 hover:ring-gray-500 hover:cursor-pointer">
             Upload
           </Button>
         </Link>
