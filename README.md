@@ -1,12 +1,48 @@
 # Instagram Local Comparison Tool
 
-So this project started out as me just messing around with some new UI libraries and also trying to bring an idea my brother had into reality. The idea was basically to know who your unfollowers and fans are on Instagram, but without using any third-party apps or websites. Everything should be done locally. The way it works is simple: the user downloads their Instagram data (followers and followings) and uploads it into the site. Then the site compares both lists and shows you things like your followings, your followers, who’s not following you back, and who are your fans (people who follow you but you don’t follow back). At one point, I added a button to search by username, but I never implemented it. When I asked GPT about it, it said using APIs for that would be illegal, so I just left the button disabled and useless.
+This project started out as me just messing around with some new UI libraries and trying to build something based on an idea from my brother. The idea was to check who your unfollowers and fans are on Instagram without using shady third-party apps or websites. Everything happens locally. The flow is simple: you download your Instagram data (followers + followings), upload it into the site, and it compares the lists to show your followings, followers, unfollowers, and fans. I even added a search by username button at one point, but since that would require external API usage (and that’s kinda against Instagram’s rules), I just disabled it.
+
+---
 
 ## v1
-The first version was really just me testing things out. I used **Ceneirty UI** for the UI components and also played around with some background effects. I got the basic local comparison working — so you could see followers, followings, unfollowers, and fans. I also added the search button here, but again, it didn’t actually do anything. Looking back, it was pretty rough, but it helped me understand how to structure the project.
+The first version where I played around with **[Aceternity UI](https://ui.aceternity.com/)**. I also experimented with some background styling. The core logic of comparing followers and followings was built here. It worked, but the UI was messy. I also added a search button that didn’t actually do anything.
+
+<p align="center">
+  <img src="images/1-1.png" width="30%" />
+</p>
+<p align="center">
+  <img src="images/1-2.png" width="30%" />
+</p>
+<p align="center">
+  <img src="images/1-3.png" width="30%" />
+</p>
+
+---
 
 ## v2
-In the second version, I started learning about **dark mode** and tried to implement it. The UI got a little better compared to v1, and it definitely felt like an upgrade. But honestly, it still felt messy and not something I wanted to keep working on. So instead of polishing it further, I just decided to scrap v2 completely and move on to the next version.
+Here I started experimenting with **dark mode** and used **[PatternCraft.fun](https://patterncraft.fun/?ref=dailydev)** for generating background patterns. The UI looked better than v1 and felt like a step up, but overall it was still rough. Instead of polishing it further, I decided to move on.
+
+<p align="center">
+  <img src="images/2-1.png" width="30%" />
+</p>
+<p align="center">
+  <img src="images/2-2.png" width="30%" />
+</p>
+<p align="center">
+  <img src="images/2-3.png" width="30%" />
+</p>
+
+---
 
 ## v3
-This is the version that feels the most complete. I combined **shadcn/ui** with **Ceneirty UI** to make the UI a lot cleaner and more minimalistic. Dark mode actually works properly here, and overall the design looks way better than before. At this point, I feel like the project is in a good spot, so I’ll probably stop here for now. It’s simple, functional, and looks decent, which is all I wanted when I started out.
+This version feels the cleanest so far. I combined **[shadcn/ui](https://ui.shadcn.com/)** with **[Aceternity UI](https://ui.aceternity.com/)** to build a more minimalistic UI. Dark mode works properly here, and I simplified the comparison by removing followers/followings and only showing **unfollowers** and **fans**. At this point, the design feels stable and good enough to stop for now.
+
+<p align="center">
+  <img src="images/3-1.png" width="30%" />
+</p>
+<p align="center">
+  <img src="images/3-2.png" width="30%" />
+</p>
+<p align="center">
+  <img src="images/3-3.png" width="30%" />
+</p>
