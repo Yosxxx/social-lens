@@ -29,13 +29,15 @@ export default function Home() {
 
       <div className="mt-5 flex gap-x-5">
         <Link href={"/docs"}>
-          <Button className={`px-8 py-2 text-xs`}>Docs</Button>
+          <Button className={`px-8 py-2 text-xs cursor-pointer`}>Docs</Button>
         </Link>
-        <Link href={"#"}>
-          <Button className="px-8 py-2 text-xs">Search by username</Button>
+        <Link href={"#"} className="cursor-not-allowed">
+          <Button className="px-8 py-2 text-xs " disabled>
+            Search by username
+          </Button>
         </Link>
-        <Link href={"#"}>
-          <Button className="px-8 py-2 text-xs">Upload</Button>
+        <Link href={"/upload"}>
+          <Button className="px-8 py-2 text-xs cursor-pointer">Upload</Button>
         </Link>
       </div>
     </div>
