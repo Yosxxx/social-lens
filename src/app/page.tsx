@@ -28,7 +28,7 @@ export default function Home() {
       </div>
 
       <div className="mt-5 flex gap-x-5">
-        <Link href={"#"}>
+        <Link href={"/docs"}>
           <Button className={`px-8 py-2 text-xs`}>Docs</Button>
         </Link>
         <Link href={"#"}>
