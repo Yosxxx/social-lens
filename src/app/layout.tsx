@@ -1,4 +1,6 @@
 import "./globals.css";
+import { ThemeProvider } from "@/components/themes/theme-provider";
+import { GeistSans } from "geist/font/sans";
 
 export default function RootLayout({
   children,
@@ -6,8 +8,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" className={GeistSans.className} suppressHydrationWarning>
+      <body className="transition-all duration-200 ease-in-out ">
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
