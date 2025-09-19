@@ -123,17 +123,14 @@ export default function UploadPage() {
       </div>
 
       {file && (
-        <>
-          {/* <div className="text-sm text-gray-600">Selected: {file.name}</div> */}
-          <div className="flex gap-x-5">
-            <Button onClick={handleAnalyze} disabled={followingList.length > 1 && followingList.length > 1}>
-              Analyze
-            </Button>
-            <Button variant="secondary" onClick={handleReset}>
-              Reset
-            </Button>
-          </div>
-        </>
+        <div className="flex gap-x-5">
+          <Button onClick={handleAnalyze} disabled={followingList.length > 1 && followingList.length > 1}>
+            Analyze
+          </Button>
+          <Button variant="secondary" onClick={handleReset}>
+            Reset
+          </Button>
+        </div>
       )}
 
       {unfollowersList.length > 1 && fansList.length > 1 && (

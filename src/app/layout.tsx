@@ -10,7 +10,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={GeistSans.className} suppressHydrationWarning>
-      <body className="transition-all duration-200 ease-in-out ">
+      <body className="transition-all duration-200 ease-in-out">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
           <Toaster></Toaster>

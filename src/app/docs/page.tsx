@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ThemeToggleButton from "@/components/themes/theme-toggle-btn";
 import BackButton from "@/components/back-btn";
+import { motion } from "motion/react";
 
 export default function DocumentationPage() {
   return (
@@ -18,13 +19,18 @@ export default function DocumentationPage() {
       </div>
 
       {/* Sidebar */}
-      <div className="bg-muted/40 h-fit p-7 rounded-md border-primary/20 border-1 flex flex-col gap-y-2">
+      <motion.div
+        initial={{ opacity: 0, x: -60 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="bg-muted/40 h-fit p-7 rounded-md border-primary/20 border-1 flex flex-col gap-y-2"
+      >
         <div>Quick Summary</div>
         <div className="text-muted-foreground text-sm">
           <div>1. Request export in JSON.</div>
           <div>2. Download ZIP</div>
           <div>
-            3. Upload ZIP to{" "}
+            3. Upload ZIP to
             <Link href={"/upload"} className="underline">
               /upload
             </Link>
@@ -33,10 +39,14 @@ export default function DocumentationPage() {
         <Link href={"/upload"}>
           <Button className="hover: cursor-pointer">Start Analysis</Button>
         </Link>
-      </div>
+      </motion.div>
 
       {/* Main page */}
-      <div>
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
         <div className="flex flex-col gap-2">
           <div className="font-bold text-3xl">Export Instagram Data for Local Analysis</div>
           <div className="text-muted-foreground text-base">
@@ -170,7 +180,7 @@ export default function DocumentationPage() {
             These two files are sufficient. If missing, re-request with <em>Connections</em> selected.
           </p>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
